@@ -4,6 +4,55 @@
     linear-gradient(0deg, rgba(1,1,7,.76) 0%, transparent 48%),
     url("instagram-assets/sun-to-moon-crowd.jpg") center 42%/cover no-repeat;
 }
+.big-three {
+  padding-block: clamp(90px, 11vw, 150px);
+  background: #c9ff18;
+  color: #08080a;
+  border-bottom: 1px solid #08080a;
+}
+.big-three-inner {
+  display: grid;
+  grid-template-columns: .55fr 1.45fr .8fr;
+  gap: 4vw;
+  align-items: start;
+}
+.big-three h2 {
+  margin: 0;
+  font-size: clamp(5.5rem, 13vw, 14rem);
+  line-height: .72;
+  letter-spacing: -.09em;
+  text-transform: uppercase;
+}
+.big-three h2 span {
+  display: block;
+  margin-top: 30px;
+  font-size: .28em;
+  letter-spacing: -.1em;
+}
+.big-three blockquote {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.2vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  font-weight: 800;
+}
+.big-three blockquote em { color: #633cff; font-style: italic; }
+.big-three-names {
+  grid-column: 2 / 4;
+  margin-top: 46px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #08080a;
+}
+.big-three-names a {
+  padding: 18px 14px;
+  border-right: 1px solid #08080a;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+.big-three-names a:last-child { border-right: 0; }
 .photo-story {
   padding-block: clamp(90px, 12vw, 170px);
   background: #f2f0e9;
@@ -62,6 +111,11 @@
   font-weight: 900;
 }
 @media (max-width: 800px) {
+  .big-three-inner { grid-template-columns: 1fr; }
+  .big-three h2 { font-size: clamp(5rem, 29vw, 8.5rem); }
+  .big-three blockquote { margin-top: 18px; }
+  .big-three-names { grid-column: 1; grid-template-columns: 1fr; margin-top: 28px; }
+  .big-three-names a { border-right: 0; border-bottom: 1px solid #08080a; }
   .photo-story-head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 38px; }
   .photo-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
   .photo, .photo-large, .photo-tall, .photo-wide { grid-column: span 1; grid-row: span 1; }
